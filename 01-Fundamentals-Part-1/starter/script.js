@@ -52,7 +52,7 @@ console.log(firstName + ' ' + lastName);
 
 let x = 10 + 5;
 x += 10; // incrementing ; the same is possible using different opperators
-x++; // incrementing on 1  
+x++; // incrementing on 1
 console.log(x);
 
 // comparison operators and  operations
@@ -75,10 +75,35 @@ const ageSarah = now - 2018;
 const averageAge = (ageJonas + ageSarah) / 2
 console.log(ageJonas, ageSarah, averageAge)*/
 
-// code challenge#1 
+/*// code challenge#1 
 let massMark = 78, massJohn = 92, heightMark = 1.69, heightJohn = 1.95;
 let BMIMark = massMark / (heightMark * heightMark);
 let BMIJohn = massJohn / (heightJohn * heightJohn);
+
 console.log(BMIMark, BMIJohn)
+
 let markHigerBMI = BMIMark > BMIJohn
-console.log(markHigerBMI)
+
+console.log(markHigerBMI)*/
+
+/*// Strings and Template Literals
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew)
+
+console.log('String with \nmultiple \nlines written in 1 row')
+
+console.log('String with \n\
+ multiple \n\
+ lines written in multiple rows')
+
+console.log(`Multiple
+lines 
+whithout \\n `)*/
