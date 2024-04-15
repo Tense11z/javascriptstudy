@@ -165,7 +165,7 @@ console.log(4 - '23' - '10' - 3); // string - number  or number - string = numbe
 console.log('23' * '2', 2 ** '2', 29 / '4', 4 + '5'); // seems like only '+' converts numbers to strings
 */
 
-// 5 falsy values: 0, '', undefined, null, NaN
+/*// 5 falsy values: 0, '', undefined, null, NaN
 
 const money = 0;
 if (money) {
@@ -199,4 +199,43 @@ if (favouriteNumber === 23) {
 
 if (favouriteNumber !== 11) { // the same works here !== strict, != loose
     console.log('But 11 is better..')
+}*/
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+const shouldDrive = hasDriverLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log('Sarah is able to drive!')
+// } else {
+//     console.log('Someone else should drive..')
+// }
+
+const isTired = true;
+if (hasDriverLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!')
+} else {
+    console.log('Someone else should drive..')
+}
+
+// coding challenge#3
+
+const scoreDolphins = (19 + 100 + 100) / 3;
+const scoreKoalas = (18 + 100 + 100) / 3;
+const minScore = 100;
+console.log(scoreDolphins, scoreKoalas, minScore)
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= minScore) {
+    console.log("Dolphins win thes trophy")
+} else if (scoreDolphins < scoreKoalas && scoreKoalas >= minScore) {
+    console.log("Koalas win the trophy")
+} else if (scoreDolphins >= 100 || scoreKoalas >= 100) {
+    console.log("Both win the trophy")
+} else {
+    console.log("No team wins the trophy")
 }
