@@ -63,7 +63,7 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 console.log(now - 1991 > now - 2018);*/
 
-// operator precedence 
+// operator precedence
 /*let x, y;
 x = y = 25 - 10 - 5; // x = y = 10; x = 10;
 console.log(x, y);
@@ -75,7 +75,7 @@ const ageSarah = now - 2018;
 const averageAge = (ageJonas + ageSarah) / 2
 console.log(ageJonas, ageSarah, averageAge)*/
 
-/*// code challenge#1 
+/*// code challenge#1
 let massMark = 78, massJohn = 92, heightMark = 1.69, heightJohn = 1.95;
 let BMIMark = massMark / (heightMark * heightMark);
 let BMIJohn = massJohn / (heightJohn * heightJohn);
@@ -105,7 +105,7 @@ console.log('String with \n\
  lines written in multiple rows')
 
 console.log(`Multiple
-lines 
+lines
 whithout \\n `)*/
 
 /*// if statements
@@ -144,7 +144,7 @@ const BMIMark = massMark / (heightMark * heightMark);
 const BMIJohn = massJohn / (heightJohn * heightJohn);
 console.log(BMIMark, BMIJohn);
 
-/* Write your code below. Good luck! 🙂 
+/* Write your code below. Good luck! 🙂
 
 if (BMIMark > BMIJohn) {
     console.log(`Mark's BMI ${BMIMark} is higher than John's ${BMIJohn}!`)
@@ -152,7 +152,7 @@ if (BMIMark > BMIJohn) {
     console.log(`John's BMI ${BMIJohn} is higher than Mark's ${BMIMark}!`)
 } */
 
-const inputYear = '1991';
+/*const inputYear = '1991';
 console.log(inputYear + 18) // string + number = string
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear) + 18);
@@ -163,3 +163,40 @@ console.log(String(23), 23); // converting Number to String
 console.log('I am ' + 23 + ' years old')
 console.log(4 - '23' - '10' - 3); // string - number  or number - string = number
 console.log('23' * '2', 2 ** '2', 29 / '4', 4 + '5'); // seems like only '+' converts numbers to strings
+*/
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+const money = 0;
+if (money) {
+    console.log("Don't spend it all");
+} else {
+    console.log('You should get a job!');
+}
+
+const height = 0;
+if (height) {
+    console.log("YAY! Height is defined");
+} else {
+    console.log('Height is Undefined!');
+}
+
+const age = '18';
+if (age === 18) console.log('You just became an adult (strict)'); // === for strict
+
+if (age == 18) console.log('You just became an adult (loose)'); // == for loose 
+
+const favouriteNumber = Number(prompt("What's your favourite number?"));
+console.log(favouriteNumber);
+console.log(typeof (favouriteNumber));
+if (favouriteNumber === 23) {
+    console.log('Cool! 23 is an amazing number!')
+} else if (favouriteNumber === 11) {
+    console.log('11 is even better')
+} else {
+    console.log('You could select better number, meh')
+}
+
+if (favouriteNumber !== 11) { // the same works here !== strict, != loose
+    console.log('But 11 is better..')
+}
