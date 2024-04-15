@@ -134,7 +134,7 @@ if (birthYear <= 2000) {
 
 console.log(century)*/
 
-// code challenge#2
+/*// code challenge#2
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -144,10 +144,22 @@ const BMIMark = massMark / (heightMark * heightMark);
 const BMIJohn = massJohn / (heightJohn * heightJohn);
 console.log(BMIMark, BMIJohn);
 
-/* Write your code below. Good luck! 🙂 */
+/* Write your code below. Good luck! 🙂 
 
 if (BMIMark > BMIJohn) {
     console.log(`Mark's BMI ${BMIMark} is higher than John's ${BMIJohn}!`)
 } else {
     console.log(`John's BMI ${BMIJohn} is higher than Mark's ${BMIMark}!`)
-}
+} */
+
+const inputYear = '1991';
+console.log(inputYear + 18) // string + number = string
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(String(23), 23); // converting Number to String
+
+// type coercion
+console.log('I am ' + 23 + ' years old')
+console.log(4 - '23' - '10' - 3); // string - number  or number - string = number
+console.log('23' * '2', 2 ** '2', 29 / '4', 4 + '5'); // seems like only '+' converts numbers to strings
