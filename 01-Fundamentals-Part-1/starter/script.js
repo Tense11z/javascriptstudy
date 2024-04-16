@@ -262,7 +262,7 @@ switch (day) {
 
 // =======================================================
 // implementation of the switch statement above, using IFs
-
+/*
 if (day === 'monday') {
     console.log('Plan course structure');
     console.log('Go to coding meetup');
@@ -297,3 +297,22 @@ switch (language) {
     default:
         console.log('Great language too :D');
 }
+*/
+
+//================================================
+// conditional (ternary) operator
+
+const age = 23;
+age >= 18 ? console.log('I like to drink wine') :
+    console.log('I like to drink water')
+
+const drinkOfChoice = age >= 18 ? 'wine 🍷' : 'water 🍼';
+console.log(drinkOfChoice);
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 🍼'}`);
+
+// codechallenge#4
+const bill = 275;
+
+const tip = bill >= 50 && bill <= 300 ? bill / 100 * 15 : bill / 100 * 20;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
