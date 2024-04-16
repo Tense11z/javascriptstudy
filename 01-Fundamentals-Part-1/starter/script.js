@@ -200,7 +200,7 @@ if (favouriteNumber === 23) {
 if (favouriteNumber !== 11) { // the same works here !== strict, != loose
     console.log('But 11 is better..')
 }*/
-
+/*
 const hasDriverLicense = true;
 const hasGoodVision = true;
 
@@ -238,4 +238,24 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= minScore) {
     console.log("Both win the trophy")
 } else {
     console.log("No team wins the trophy")
+}*/
+
+// switch statements
+
+const day = 'wednesday';
+
+switch (day) {
+    case 'monday':
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday': // if case has no break statement > then next case will be executed
+    case 'thursday':
+        console.log('Write code examples');
+        break
+    default:
+        console.log('Not a Valid day!');
 }
