@@ -241,7 +241,7 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= minScore) {
 }*/
 
 // switch statements
-
+/*
 const day = 'wednesday';
 
 switch (day) {
@@ -259,7 +259,7 @@ switch (day) {
     default:
         console.log('Not a Valid day!');
 }
-
+*/
 // =======================================================
 // implementation of the switch statement above, using IFs
 /*
@@ -316,3 +316,14 @@ const bill = 275;
 
 const tip = bill >= 50 && bill <= 300 ? bill / 100 * 15 : bill / 100 * 20;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
+
+//codingheroes ternary challenge
+
+const country = 'Ukraine';
+const population = 55 // millions
+
+console.log(population > 33 ? `${country}'s population is above average` : `${country}'s population is below average`); // my poor solution
+
+console.log(
+    `${country}'s population is ${population > 33 ? 'above' : 'below'} average`
+); // solution of  the mature JS dev :(
