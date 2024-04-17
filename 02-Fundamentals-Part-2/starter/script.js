@@ -99,3 +99,45 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 }
 
 console.log(yearsUntilRetirement(1991, 'Jonas'))
+
+//============================
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3))
+
+// codingheroes Arrow Functions challenge
+
+function percentageOfWorld1(population) { //declaration
+    const worldPopulation = 7900;
+    return population / worldPopulation * 100;
+}
+
+const percentageOfWorld3 = population => {
+    const worldPopulation = 7900;
+    return population / worldPopulation * 100;
+}
+
+const countryPercentage3 = percentageOfWorld3(27);
+console.log(countryPercentage3)
+
+// codingheroes Functions Calling Other Functions challenge
+
+const describePopulation = function (country, population) {
+    return `${country} has ${population} million people, which is about ${percentageOfWorld3(population)} of the world'`
+}
+
+const describeUkraine = describePopulation('Ukraine', 33);
+console.log(describeUkraine)
