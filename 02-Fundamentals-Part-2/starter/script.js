@@ -11,7 +11,7 @@ const private = 'Audio' // will 'throw Unexpected strict mode reserved word'
 */
 
 // ============================
-
+/*
 function logger() {
     console.log('My name is Jonas');
 }
@@ -29,3 +29,17 @@ console.log(appleJuice);
 console.log(fruitProcessor(5, 0));
 
 const appleOrangeJuice = fruitProcessor(2, 4);
+*/
+
+// codingheroes functions challenge
+
+function describeCountry(country, population, capitalCity) {
+    console.log(country, population, capitalCity);
+    const Description = `${country} has ${population} million people and its capital city is ${capitalCity}. \n`;
+    return Description
+}
+
+const countryDescription1 = describeCountry('Ukraine', 38, 'Kyiv');
+const countryDescription2 = describeCountry('France', 67, 'Paris');
+const countryDescription3 = describeCountry('Republic of Korea', 51, 'Seoul');
+console.log(countryDescription1, countryDescription2, countryDescription3)
