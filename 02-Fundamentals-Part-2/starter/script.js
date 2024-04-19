@@ -1,5 +1,5 @@
 // ============================
-/*'use strict'; // helps to trow errors 
+/*'use strict'; // helps to trow errors
 
 let hasDriversLicense = false;
 const passTest = true;
@@ -144,9 +144,7 @@ console.log(describeUkraine)
 */
 
 // =============================
-
-/* Write your code below. Good luck! 🙂 */
-
+/*
 const calcAverage = (score1, score2, score3) => {
     const average = (score1 + score2 + score3) / 3; // this should be calcAverage = score1, score2, score3) => (score1 + score2 + score3) / 3
     return average
@@ -164,3 +162,42 @@ const checkWinner = function (avgDolphins, avgKoalas) {
         return console.log('No team wins...')
     }
 }
+*/
+
+//=============================
+/*
+const friends = ['Michael', 'Steven', 'Peter']; //array declaration
+console.log(friends)
+
+const years = new Array(1991, 2005, 2001, 1999); //another way of array declaration
+console.log(years)
+
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]) // display last element;
+
+friends[2] = 'Jay';
+console.log(friends);
+
+const firstName = 'Jonas';
+const jonasArr = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+console.log(jonasArr, jonasArr.length);
+
+//exercise 
+const calcAge = function (birthYear) { //function expression; cannot be called before declaration
+    return 2037 - birthYear;
+}
+
+const birthYears = new Array(1991, 2005, 2001, 1999);
+
+const age1 = calcAge(birthYears[0]);
+const age2 = calcAge(birthYears[1]);
+const age3 = calcAge(birthYears[birthYears.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(birthYears[0]), calcAge(birthYears[1]), calcAge(birthYears[birthYears.length - 1])];
+console.log(ages);
+*/
