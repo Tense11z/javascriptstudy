@@ -217,7 +217,7 @@ console.log(percentages);
 */
 
 // ========================
-
+/*
 const friends = ['Michael', 'Steven', 'Peter'];
 friends.push('Jay'); // adds new element at the end of an array
 console.log(friends);
@@ -240,7 +240,7 @@ console.log(friends.includes('Bob'));
 if (friends.includes('Peter')) { // usecase of .includes method
     console.log('You have a friend called Peter');
 }
-
+*/
 // udemy arrays challenge
 /*
 Your tasks:
@@ -255,7 +255,8 @@ BONUS: Create an array totals containing the total values, so the bill + tip.
 
 TEST DATA: 125, 555, and 44.
 */
-const calcTip = function (bill) {
+/*
+const calcTip = function (bill) { // should be : return bill >-50 && bil <=300 ? bill * 0.15 : bill * 0.2
     if (bill >= 50 && bill <= 300) {
         return bill / 100 * 15;
     } else {
@@ -267,7 +268,7 @@ const bills = new Array(125, 555, 44);
 const tips = new Array(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
 
 const totals = new Array(bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]);
-
+*/
 // codingheroes arrays challenge
 /*
 Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called neighbours.
@@ -279,7 +280,7 @@ Unfortunately, after some time the new country is dissolved, so remove it from t
 If the neighbours array does not include the country 'Germany', log to the console: 'Probably not a central european country :D'.
 
 Change the name of one of your neighbouring countries. To do that, find the index of the country in the neighbours array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'. */
-
+/*
 const neighbours = new Array('Austria', 'France', 'Italy', 'Deustchland');
 console.log(neighbours);
 neighbours.push('Utopia');
@@ -293,4 +294,15 @@ if (!neighbours.includes('Germany') && !neighbours.includes('Deustchland')) {
 
 neighbours[neighbours.indexOf('Italy')] = 'Spain';
 console.log(neighbours);
+*/
 
+// =========================
+
+const jonasArray = new Array('Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']);
+
+const jonas = { firstName: 'Jonas', lastName: 'Schmedtmann', age: 2037 - 1991, job: 'teacher', friends: ['Michael', 'Peter', 'Steven'] }; // creating objects(dictionaries);
+
+// codingheroes Objects challenge
+
+const myCountry = { country: 'France', capital: 'Paris', language: 'French', population: 68, neighbors: ['Germany', 'Untide Kingdom', 'Belgium', 'Switzerland', 'Spain', 'Italy'] };
+console.log(myCountry);
