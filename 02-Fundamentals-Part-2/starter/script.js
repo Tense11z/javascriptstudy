@@ -201,3 +201,15 @@ console.log(age1, age2, age3);
 const ages = [calcAge(birthYears[0]), calcAge(birthYears[1]), calcAge(birthYears[birthYears.length - 1])];
 console.log(ages);
 */
+
+//========================
+// codingheroes arrays challenge
+const populations = [33, 67, 51, 22];
+console.log(populations.length === 4);
+
+function percentageOfWorld(population) { //declaration
+    const worldPopulation = 7900;
+    return population / worldPopulation * 100;
+}
+const percentages = new Array(percentageOfWorld(populations[0]), percentageOfWorld(populations[1]), percentageOfWorld(populations[2]), percentageOfWorld(populations[populations.length - 1]));
+console.log(percentages);
