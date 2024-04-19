@@ -186,7 +186,7 @@ const firstName = 'Jonas';
 const jonasArr = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
 console.log(jonasArr, jonasArr.length);
 
-//exercise 
+//exercise
 const calcAge = function (birthYear) { //function expression; cannot be called before declaration
     return 2037 - birthYear;
 }
@@ -204,6 +204,7 @@ console.log(ages);
 
 //========================
 // codingheroes arrays challenge
+/*
 const populations = [33, 67, 51, 22];
 console.log(populations.length === 4);
 
@@ -213,3 +214,83 @@ function percentageOfWorld(population) { //declaration
 }
 const percentages = new Array(percentageOfWorld(populations[0]), percentageOfWorld(populations[1]), percentageOfWorld(populations[2]), percentageOfWorld(populations[populations.length - 1]));
 console.log(percentages);
+*/
+
+// ========================
+
+const friends = ['Michael', 'Steven', 'Peter'];
+friends.push('Jay'); // adds new element at the end of an array
+console.log(friends);
+
+friends.unshift('John');// adds new element at the beggining of an array
+console.log(friends);
+
+friends.pop(); // removes last element from an array
+console.log(friends);
+
+friends.shift(); // removes first elemnt from an array
+console.log(friends);
+
+console.log(friends.indexOf('Steven')); // returns element's position
+console.log(friends.indexOf('Bob')); // returns -1 for element that is not in array
+
+console.log(friends.includes('Steven')); // returns true if element in array otherwise - false
+console.log(friends.includes('Bob'));
+
+if (friends.includes('Peter')) { // usecase of .includes method
+    console.log('You have a friend called Peter');
+}
+
+// udemy arrays challenge
+/*
+Your tasks:
+
+Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+And now let's use arrays! So, create an array called bills containing the test data below.
+
+Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+BONUS: Create an array totals containing the total values, so the bill + tip.
+
+TEST DATA: 125, 555, and 44.
+*/
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill / 100 * 15;
+    } else {
+        return bill / 100 * 20;
+    }
+}
+
+const bills = new Array(125, 555, 44);
+const tips = new Array(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
+
+const totals = new Array(bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]);
+
+// codingheroes arrays challenge
+/*
+Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called neighbours.
+
+At some point, a new country called 'Utopia' is created in the neighbourhood of your selected country, so add it to the end of the neighbours array.
+
+Unfortunately, after some time the new country is dissolved, so remove it from the end of the array.
+
+If the neighbours array does not include the country 'Germany', log to the console: 'Probably not a central european country :D'.
+
+Change the name of one of your neighbouring countries. To do that, find the index of the country in the neighbours array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'. */
+
+const neighbours = new Array('Austria', 'France', 'Italy', 'Deustchland');
+console.log(neighbours);
+neighbours.push('Utopia');
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany') && !neighbours.includes('Deustchland')) {
+    console.log('Probably not a central european country :D');
+}
+
+neighbours[neighbours.indexOf('Italy')] = 'Spain';
+console.log(neighbours);
+
