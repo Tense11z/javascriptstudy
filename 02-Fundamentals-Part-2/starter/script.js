@@ -338,7 +338,7 @@ console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his bes
 */
 
 // codingheroes dot vs bracket notation
-
+/*
 const myCountry = { country: 'France', capital: 'Paris', language: 'French', population: 68, neighbors: ['Germany', 'Untide Kingdom', 'Belgium', 'Switzerland', 'Spain', 'Italy'] };
 console.log(myCountry);
 
@@ -347,3 +347,44 @@ myCountry.population += 2;
 console.log(myCountry.population);
 myCountry['population'] -= 2;
 console.log(myCountry.population);
+*/
+
+//==============================
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: false,
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    calcAge: function () {
+        console.log(this) // 'this' means current object
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    licenseCheck: function () { //got complitely wrong ideaf of the task.
+        if (this.hasDriversLicense) {
+            this.check = 'a';
+        } else {
+            this.check = 'no';
+        }
+        return this.check;
+    },
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    } // thats was exactly the idea of challenge
+};
+jonas.calcAge();
+jonas.licenseCheck();
+console.log(jonas.age);
+// console.log(jonas['calcAge'](1991));
+
+//challenge
+
+console.log(`${jonas.firstName} is a ${jonas.age} old ${jonas.job}, and he has ${jonas.check} driver's license`);
+console.log(jonas.getSummary())
