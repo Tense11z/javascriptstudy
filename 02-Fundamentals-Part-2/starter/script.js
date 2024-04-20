@@ -297,7 +297,7 @@ console.log(neighbours);
 */
 
 // =========================
-
+/*
 const jonasArray = new Array('Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']);
 
 const jonas = { firstName: 'Jonas', lastName: 'Schmedtmann', age: 2037 - 1991, job: 'teacher', friends: ['Michael', 'Peter', 'Steven'] }; // creating objects(dictionaries);
@@ -305,4 +305,33 @@ const jonas = { firstName: 'Jonas', lastName: 'Schmedtmann', age: 2037 - 1991, j
 // codingheroes Objects challenge
 
 const myCountry = { country: 'France', capital: 'Paris', language: 'French', population: 68, neighbors: ['Germany', 'Untide Kingdom', 'Belgium', 'Switzerland', 'Spain', 'Italy'] };
-console.log(myCountry);
+console.log(myCountry);*/
+
+// =========================
+
+const jonas = { firstName: 'Jonas', lastName: 'Schmedtmann', age: 2037 - 1991, job: 'teacher', friends: ['Michael', 'Peter', 'Steven'] };
+console.log(jonas);
+
+console.log(jonas.lastName); // retrieving last name from Object
+console.log(jonas['lastName']); // retrieving last name from Object another way;
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+console.log(jonas[interestedIn]);
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! hoose between firstName, lastName, age, job and friends');
+}
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+//challenge at the end of the lecture#43
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
