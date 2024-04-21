@@ -387,4 +387,29 @@ console.log(jonas.age);
 //challenge
 
 console.log(`${jonas.firstName} is a ${jonas.age} old ${jonas.job}, and he has ${jonas.check} driver's license`);
-console.log(jonas.getSummary())
+console.log(jonas.getSummary());
+
+// udemy coding challenge#3
+
+const mark = {
+    fullName: 'Mark Miller', mass: 78, height: 169,
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+const john = {
+    fullName: 'John Smith', mass: 92, height: 195,
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
+} else if (mark.calcBMI() < john.calcBMI()) {
+    console.log(`${john.fullName}'s BMI(${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+} else {
+    console.log(`Both fat, idc.`)
+}
