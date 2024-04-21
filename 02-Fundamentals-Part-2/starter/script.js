@@ -494,7 +494,7 @@ for (let population = 0; population < populations.length; population += 1) {
 }
 console.log(percentages2);
 */
-
+/*
 const jonasArr = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']];
 
 for (let i = jonasArr.length - 1; i >= 0; i -= 1) { // looping backwawrds
@@ -518,3 +518,44 @@ const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'],
 for (let i = 0; i < listOfNeighbours.length; i++)
     for (let y = 0; y < listOfNeighbours[i].length; y++)
         console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+*/
+let rep = 1;
+while (rep <= 10) {
+    console.log(rep);
+    rep += 1;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}
+
+// udemy challenge#4
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+/* Write your code below. Good luck! 🙂 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [], totals = [];
+for (let i = 0; i < bills.length; i += 1) {
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
+}
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    let counter = 0;
+    for (let i = 0; i < arr.length; i += 1) {
+        sum += arr[i];
+        counter += 1;
+    }
+    return sum / counter;
+}
+
+console.log(calcAverage(totals));
