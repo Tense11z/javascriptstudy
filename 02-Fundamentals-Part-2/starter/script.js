@@ -413,3 +413,23 @@ if (mark.calcBMI() > john.calcBMI()) {
 } else {
     console.log(`Both fat, idc.`)
 }
+
+// codingheroes Object methods challenge 
+
+const myCountry = {
+    country: 'France',
+    capital: 'Paris',
+    language: 'French',
+    population: 68,
+    neighbors: ['Germany', 'Untide Kingdom', 'Belgium', 'Switzerland', 'Spain', 'Italy'],
+    describe: function () {
+        return console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbors.length} neighbouring countries and a capital called ${this.capital}.`);
+    },
+    checkIsland: function () {
+        this.isIsland = this.neighbors ? false : true;
+        return this.isIsland;
+    }
+};
+
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
