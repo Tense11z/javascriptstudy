@@ -350,6 +350,7 @@ console.log(myCountry.population);
 */
 
 //==============================
+/*
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
@@ -405,11 +406,12 @@ const john = {
         return this.bmi;
     }
 };
-
-if (mark.calcBMI() > john.calcBMI()) {
-    console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
-} else if (mark.calcBMI() < john.calcBMI()) {
-    console.log(`${john.fullName}'s BMI(${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+mark.calcBMI();
+john.calcBMI();
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
+} else if (mark.bmi < john.bmi) {
+    console.log(`${john.fullName}'s BMI(${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`);
 } else {
     console.log(`Both fat, idc.`)
 }
@@ -433,3 +435,61 @@ const myCountry = {
 
 console.log(myCountry.describe());
 console.log(myCountry.checkIsland());
+*/
+
+// ==========================
+
+for (let rep = 1; rep <= 10; rep += 1) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+const jonasArr = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']];
+const types = [];
+
+for (let i = 0; i <= jonasArr.length; i += 1) {
+    console.log(jonasArr[i]);
+    /*types[i] = typeof (jonasArr[i]); */ // filling new 'types' array.
+    types.push(typeof (jonasArr[i]));
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+//continue and break statements
+
+for (let i = 0; i <= jonasArr.length; i += 1) {
+    if (typeof jonasArr[i] !== 'string') continue;
+    console.log(jonasArr[i]);
+}
+
+for (let i = 0; i <= jonasArr.length; i += 1) {
+    if (typeof jonasArr[i] === 'number') break;
+    console.log(jonasArr[i]);
+}
+
+// codingheroes loop challenge
+
+for (let i = 1; i <= 50; i += 1) {
+    console.log(`Voter number ${i} is currently voting`);
+}
+
+//codingheroes Arrays, Breaking and Continuing challenge
+const populations = [33, 67, 51, 22];
+const percentages2 = []
+
+function percentageOfWorld1(population) { //declaration
+    const worldPopulation = 7900;
+    return population / worldPopulation * 100;
+}
+
+for (let population = 0; population < populations.length; population += 1) {
+    percentages2.push(percentageOfWorld1(populations[population]));
+}
+console.log(percentages2)
