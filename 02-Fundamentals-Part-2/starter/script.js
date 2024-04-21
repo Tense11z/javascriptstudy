@@ -438,7 +438,7 @@ console.log(myCountry.checkIsland());
 */
 
 // ==========================
-
+/*
 for (let rep = 1; rep <= 10; rep += 1) {
     console.log(`Lifting weights repetition ${rep}`);
 }
@@ -448,7 +448,7 @@ const types = [];
 
 for (let i = 0; i <= jonasArr.length; i += 1) {
     console.log(jonasArr[i]);
-    /*types[i] = typeof (jonasArr[i]); */ // filling new 'types' array.
+    // types[i] = typeof (jonasArr[i]); // filling new 'types' array.
     types.push(typeof (jonasArr[i]));
 }
 console.log(types);
@@ -492,4 +492,29 @@ function percentageOfWorld1(population) { //declaration
 for (let population = 0; population < populations.length; population += 1) {
     percentages2.push(percentageOfWorld1(populations[population]));
 }
-console.log(percentages2)
+console.log(percentages2);
+*/
+
+const jonasArr = ['Jonas', 'Schmedtmann', 2037 - 1991, 'teacher', ['Michael', 'Peter', 'Steven']];
+
+for (let i = jonasArr.length - 1; i >= 0; i -= 1) { // looping backwawrds
+    console.log(i, jonasArr[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`====== Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep += 1) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`)
+    }
+}
+
+// codingheroes Looping Arrays, Breaking and Continuing challenge
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'],
+['Norway', 'Sweden', 'Russia']
+]; // could not understand the assignment, so this is revealed solution
+
+for (let i = 0; i < listOfNeighbours.length; i++)
+    for (let y = 0; y < listOfNeighbours[i].length; y++)
+        console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
