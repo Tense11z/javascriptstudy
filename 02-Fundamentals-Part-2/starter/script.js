@@ -519,6 +519,7 @@ for (let i = 0; i < listOfNeighbours.length; i++)
     for (let y = 0; y < listOfNeighbours[i].length; y++)
         console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
 */
+/*
 let rep = 1;
 while (rep <= 10) {
     console.log(rep);
@@ -539,7 +540,7 @@ const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 
-/* Write your code below. Good luck! 🙂 */
+
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [], totals = [];
@@ -555,7 +556,41 @@ const calcAverage = function (arr) {
         sum += arr[i];
         counter += 1;
     }
-    return sum / counter;
+    return sum / counter; // no need in counter, just use arr.length, dumbass
 }
 
-console.log(calcAverage(totals));
+console.log(calcAverage(totals));*/
+
+// while loop
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'],
+['Norway', 'Sweden', 'Russia']];
+
+/*
+for (let i = 0; i < listOfNeighbours.length; i++)
+    for (let y = 0; y < listOfNeighbours[i].length; y++)
+        console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+*/
+
+let i = 0, j = 0;
+while (i < listOfNeighbours.length) {
+    while (j < listOfNeighbours[i].length) {
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+        j += 1;
+    }
+    i += 1;
+    j = 0;
+}
+
+//codingheroes The while Loop exercise 
+
+const percentages3 = [];
+
+let d = 0;
+while (d < populations.length) {
+    const perc = percentageOfWorld1(populations[d]);
+    percentages3.push(perc);
+    d++;
+}
+
+console.log(percentages3);
