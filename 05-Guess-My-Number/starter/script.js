@@ -23,20 +23,26 @@ document.querySelector('.check').addEventListener('click', function() {
     const guess = Number(document.querySelector('.guess').value);
     console.log(typeof guess, guess);
     if(score){
-        if(!guess) {
+        
+        if(!guess) { // incorrect value
             document.querySelector('.message').textContent = '⛔ No number!';
-        } else if (secretNumber === guess){
+       
+        } else if (secretNumber === guess){ // win condition
             document.querySelector('.message').textContent='🎉 Correct Number!';
-        } else if (secretNumber < guess){
+            document.querySelector('body').style.backgroundColor = '#60b347';
+            document.querySelector('.number').style.width = '30rem';
+
+        } else if (secretNumber < guess){ // when guess is higher
             score -=1;
             document.querySelector('.score').textContent = score;
             document.querySelector('.message').textContent='📈 Too High!';
-        } else if (secretNumber > guess){
+        
+        } else if (secretNumber > guess){ // when guess is lower
             score -=1;
             document.querySelector('.score').textContent = score;
             document.querySelector('.message').textContent='📉 Too Low!';
         }
-    } else {
+    } else { // game is lost
         document.querySelector('.message').textContent='☠ You Lost!';
     }
 })
