@@ -34,7 +34,13 @@ document.querySelector('.check').addEventListener('click', function() {
             if (highScore < score){ highScore = score;
             document.querySelector('.highscore').textContent = highScore;}
 
-        } else if (secretNumber < guess){ // when guess is higher
+        } else if (secretNumber !== guess){
+            document.querySelector('.message').textContent= guess > secretNumber ? '📈 Too High!' : '📉 Too Low!';
+            document.querySelector('body').style.backgroundColor = '#222';
+            score -=1;
+            document.querySelector('.score').textContent = score;
+        }/*
+         else if (secretNumber < guess){ // when guess is higher
             score -=1;
             document.querySelector('.score').textContent = score;
             document.querySelector('.message').textContent='📈 Too High!';
@@ -45,7 +51,7 @@ document.querySelector('.check').addEventListener('click', function() {
             document.querySelector('.score').textContent = score;
             document.querySelector('.message').textContent='📉 Too Low!';
             document.querySelector('body').style.backgroundColor = '#222';
-        }
+        }*/
     } else { // game is lost
         score -=1;
         document.querySelector('.score').textContent = score;
