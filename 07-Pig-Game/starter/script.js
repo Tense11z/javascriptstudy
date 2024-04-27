@@ -12,14 +12,28 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-//starting conditions
-score0Element.textContent = 0;
-score1Element.textContent = 0;
-diceElement.classList.add('hidden');
-const scores = [0, 0];
-let currentScore = 0;
-let currentPlayer = 0;
-let playing = true;
+
+let scores, currentScore, playing, currentPlayer;
+
+const init = function () {
+  //starting conditions
+  diceElement.classList.add('hidden');
+  scores = [0, 0];
+  currentScore = 0;
+  currentPlayer = 0;
+  playing = true;
+
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  current0Element.textContent = 0;
+  current1Element.textContent = 0;
+
+  player0Element.classList.remove('player--winner');
+  player1Element.classList.remove('player--winner');
+  player0Element.classList.add('player--active');
+  player1Element.classList.remove('player--active');
+}
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${currentPlayer}`).textContent = 0;
@@ -60,7 +74,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${currentPlayer}`).textContent = scores[currentPlayer];
 
     // 2. Check if score is >=100
-    if (scores[currentPlayer] >= 20) {
+    if (scores[currentPlayer] >= 100) {
       playing = false;
       document.querySelector(`.player--${currentPlayer}`).classList.add('player--winner');
       document.querySelector(`.player--${currentPlayer}`).classList.remove('player--active');
@@ -71,3 +85,23 @@ btnHold.addEventListener('click', function () {
     }
   }
 })
+
+// my solution 
+/*
+btnNew.addEventListener('click', function () {
+  playing = true;
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  currentScore = 0;
+  playing = true;
+  for (let i = 0; i < scores.length; i += 1) {
+    scores[i] = 0;
+    currentPlayer = i;
+    document.querySelector(`.player--${currentPlayer}`).classList.remove('player--winner');
+    document.querySelector(`.player--${currentPlayer}`).classList.remove('player--active');
+    document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
+  }
+  currentPlayer = 0;
+  player0Element.classList.add('player--active');
+})*/
+btnNew.addEventListener('click', init);
